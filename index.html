@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Formulário com banco de dados</title>
+</head>
+<body>
+    <div class="background">
+        <h1 id="title">Cadastro de usuário</h1>
+        <div class="lowerbackgorund">
+        <h2 id="subtitle">Formulário simples</h2>
+            <form action="cad.php" method="get">
+                <fieldset>
+                    <div class="campo" id="emasenha">
+                        <label for="email"><Strong>Email</Strong></label>
+                        <input type="email" name="email" id="email">
+                        <label for="password"><Strong>Senha</Strong></label>
+                        <input type="password" name="password" id="password" required>
+                    </div>
+                    <div class="campo" id="nomecpf">
+                        <label for="name"><strong>Nome</strong></label>
+                        <input type="text" name="name" id="name" required>
+                        <label for="cpf"><Strong>Cpf</Strong></label>
+                        <input type="text" name="cpf" id="cpf" maxlength="14" oninput="mascara(this)" required >
+                    </div>
+                </fieldset>
+                    <!--<div class="campo">
+                        <label for="phone">Celular</label>
+                        <select name="phone" id="localphone">
+                            <option value="brasil" selected>+55</option>
+                            <option value="EUA">+1</option>
+                            <option value="Germany">+49</option>
+                            <option value="RUSSIA">+7</option>
+                        </select>
+                        <input type="tel" name="phone" id="phone" oninput="mascaraTel(this)" maxlength="13">
+                    </div>
+                    <div class="campo">
+                        <label for="birth">Nascimento</label>
+                        <input type="date" name="birth" id="birth">
+                    </div>
+                    <div class="campo">
+                        <label for="textbox">Sobre você</label>
+                        <br>
+                        <textarea name="textbox" id="textbox" cols="30" rows="10"></textarea>
+                    </div>
+                -->
+                    
+
+                <input type="submit" class="btn" value="Concluído">
+            </form>
+        </div>
+    </div>
+    
+</body>
+<script>
+    let t = document.querySelector('#phone')
+    let i = document.querySelector('#cpf')
+    function mascara(i){
+        let v = i.value
+        if (isNaN(v[v.length-1])){
+            i.value = v.substring(0, v.length-1)
+            return
+        }
+        if (v.length === 3 || v.length === 7)
+        {i.value += "."}
+        if (v.length === 11)
+        {i.value += "-"}
+        console.log("O cpf:",i.value)
+    }
+    /*function mascaraTel(t)
+    {
+        let tval = t.value
+        if (isNaN(tval[tval.length - 1])){
+            t.value = tval.substring(0, tval.length-1)
+            return
+        }
+        if (tval.length === 2) t.value += '-'
+        if (tval.length === 8) t.value += '-'
+        console.log(tval)
+    }
+    */
+</script>
+</html>

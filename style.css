@@ -1,0 +1,96 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+body {
+    background-color: rgb(201, 255, 201);
+    font-family: sans-serif;
+    font-size: 1em;
+    color: #429d59;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
+    justify-content: center;
+}
+
+#title{
+    text-align: center;
+    padding-top: 13px;
+    color: white;
+    background:green;
+
+}
+#subtitle{
+    text-align: center;
+    padding-top: 15px;
+    color: green;
+}
+.lowerbackgorund{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    height: 15em;
+}
+fieldset
+{
+    border: 0;
+}
+#emasenha label {
+    display: block;
+    margin-bottom: 0.2em;
+    color: green;
+
+
+}
+#nomecpf label {
+    display: block;
+    margin-bottom: 0.2em;
+    color: green;
+
+}
+fieldset .campo {
+    float: left;
+    margin-right: 1em;
+}
+fieldset {
+    margin-left: 0.5cm;
+    margin-bottom: 1cm;
+}
+.campo input {
+    border: 0;
+    background-color: rgb(96, 204, 96);
+    border-radius: 5px;
+    height: 25px;
+    width: 250px;
+    font-size: 15px;
+
+}
+.campo input:focus {
+    border: 0;
+    outline: none;
+    background-color: rgb(197, 197, 197);
+    
+}
+textarea {
+    
+    width: 32em;
+    height: 6em;
+}
+.btn {
+    position: absolute;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    border: 0;
+    height: 50px;
+    font-size: 30px;
+    width: 200px;
+    top: 70%;
+    left: 30%;
+}
+.btn:hover {
+    background-color: rgb(0, 168, 0);
+
+}
